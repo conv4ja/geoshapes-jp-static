@@ -27,7 +27,7 @@
 各シェープファイルを静的コンテンツとして配信するサービスを提供します。
 いずれもGETリクエストのみ受け入れる擬似的なAPIエンドポイントとして振る舞います。
 
-* [GitHub](https://g1eng.github.io/geoshapes/)
+* [GitHub Pages](https://g1eng.github.io/geoshapes/)
 
 
 ## APIリソースについて
@@ -47,9 +47,14 @@
 | /city/info/:prefCode/:cityName | 市町村名から市町村メタデータを取得します | 14101 |
 | /:fmt/:cityCode | 市町村コードで境界データを取得します |  |
 
+[凡例]
+
 fmt: 境界データフォーマット geojson|topojson|pbf
+
 prefCode: 2桁の都道府県コード (e.g. 11)
+
 cityCode: 5桁表記の標準地域コード (e.g. 12101)
+
 
 # 謝辞
 
