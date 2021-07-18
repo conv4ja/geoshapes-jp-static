@@ -1,9 +1,9 @@
 # ABOUT
 
-<a rel="license" href="https://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+<a rel="license" href="https://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br /> このコンテンツは<a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a> でライセンスされています。
 
-このプロジェクトは国立情報学研究所 [Geoshapeリポジトリ](https://geoshape.ex.nii.ac.jp/city/)の提供する市町村境界データのコンテンツを、より便利に利用するためのリポジトリです。
-[Geoshapeプロジェクト](https://geoshape.ex.nii.ac.jp/city/) では平成27年時点での市町村境界データがGeoJSONないしはTopoJSON形式にて提供されており、本リポジトリでは現在の市町村境界の標準地域コードに対応するミラーコンテンツを `src/geojson` および `src/topojson` 配下に格納しています。
+このリポジトリは、国立情報学研究所 [Geoshapeリポジトリ](https://geoshape.ex.nii.ac.jp/city/)の提供する市町村境界データのコンテンツをより便利に利用するためのリポジトリです。
+[Geoshapeプロジェクト](https://geoshape.ex.nii.ac.jp/city/) で提供される平成27年時点での市町村境界データ(GeoJSONないしはTopoJSON形式)のミラーコンテンツを、現在の市町村境界の標準地域コードに対応するファイル名を付した上で `src/geojson` および `src/topojson` 配下に格納しています。
 
 [ファイル配信サイト](#Distribution)では、各境界データを静的コンテンツとしてホストします。
 ファイル単位での取得をご希望の場合はこちらもご利用ください。
@@ -18,7 +18,6 @@
 
 なお、各コンテンツについては国土交通省の「[国土数値情報](http://nlftp.mlit.go.jp/ksj/)」をもとに作成されています。
 原データの利用規約については[こちら](http://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-N03.html)をご確認ください。
-
 
 各種シンボリックリンク構成および `/src` 以外の各種コンテンツは [@g1eng](https://github.com/g1eng) の手によるものです。
 本リポジトリを再利用する場合には、CC BY-SA 4.0 クレジット表記に `Nomura Suzume` を追記してください。
