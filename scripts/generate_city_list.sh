@@ -1,10 +1,11 @@
 #!/bin/sh -e
-# generate resources for /city/list/:prefCode, /city/listAll and /prefecture/listAll
+# generate resources for /city/list/:prefCode and /city/listAll
 
 PATH=${0%/*}:$PATH
+#by default, topojson has several additional dataset of geometries. So use it.
 fmt=topojson
 
-for d in src/prefecture src/city/list; 
+for d in src/city/list; 
 do 
     [ -d $d ] && rm -rv $d
     mkdir -vp $d;
@@ -12,7 +13,7 @@ done
 
 echo \{ \
     | tr -d \\\n \
-    | tee src/prefecture/listAll src/city/listAll > /dev/null
+    | tee src/city/listAll > /dev/null
 
 for i in $(seq -w 47); do echo \{ | tr -d \\\n > src/city/list/$i; done
 
@@ -20,7 +21,6 @@ for i in src/$fmt/*.$fmt
 do
 	pref_code=$(cat $i | jq ".objects.city.geometries[].properties.N03_007" | tr -d \\\" | cut -c 1-2 )
 	pref_name=$(cat $i | jq ".objects.city.geometries[].properties.N03_001")
-	echo $pref_name:\"$pref_code\", | tr -d \\\n >> src/prefecture/listAll
 
         case $fmt in
 		#(geojson) filter='.features[].properties| [.N03_004, .N03_007]';;
@@ -38,4 +38,4 @@ do
 done
 echo done
 
-sed -ri -e s/,\$/\}/g src/city/list/* src/city/listAll src/prefecture/listAll
+sed -ri -e s/,\$/\}/g src/city/list/* src/city/listAll 
