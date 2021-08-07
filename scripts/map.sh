@@ -23,7 +23,7 @@ do
 		| tr \\\n ,\
 		| sed -r -e s/\ \+//g -e s/\^/\{/ -e s/,\?\$/\}/ \
 		| tee $i/map $i/map.json > /dev/null
-	echo generated ${dst:-geojson}/$i/map
+		  echo generated ${dst:-geojson}/$i/map
     } &
     wait
 done

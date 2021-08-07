@@ -5,5 +5,5 @@
 
 version=$(git tag -l | sort | tail -1)
 : ${version:="nover"}
-echo "{\"version\":\"$version\"}" > src/version
+echo "{\"version\":\"$version\", \"language\":\"ja\"}" > src/version
 touch src/health

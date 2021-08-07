@@ -1,8 +1,10 @@
 # ABOUT
 
-<a rel="license" href="https://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br /> このコンテンツは<a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a> でライセンスされています。
+<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="クリエイティブ・コモンズ・ライセンス" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a><br />
 
-このリポジトリは、国立情報学研究所 [Geoshapeリポジトリ](https://geoshape.ex.nii.ac.jp/city/)の提供する市町村境界データのコンテンツをより便利に利用するためのリポジトリです。
+このコンテンツは <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">クリエイティブ・コモンズ 表示 - 継承 4.0 国際 ライセンス</a>の下に提供されています。
+
+本リポジトリは、国立情報学研究所 [Geoshapeリポジトリ](https://geoshape.ex.nii.ac.jp/city/)の提供する市町村境界データのコンテンツをより便利に利用するためのクローンリポジトリです。
 [Geoshapeプロジェクト](https://geoshape.ex.nii.ac.jp/city/) で提供される平成27年時点での市町村境界データ(GeoJSONないしはTopoJSON形式)のミラーコンテンツを、現在の市町村境界の標準地域コードに対応するファイル名を付した上で `src/geojson` および `src/topojson` 配下に格納しています。
 
 [ファイル配信サイト](#Distribution)では、各境界データを静的コンテンツとしてホストします。
@@ -19,15 +21,16 @@
 なお、各コンテンツについては国土交通省の「[国土数値情報](http://nlftp.mlit.go.jp/ksj/)」をもとに作成されています。
 原データの利用規約については[こちら](http://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-N03.html)をご確認ください。
 
-各種シンボリックリンク構成および `/src` 以外の各種コンテンツは [@g1eng](https://github.com/g1eng) の手によるものです。
-本リポジトリを再利用する場合には、CC BY-SA 4.0 クレジット表記に `Nomura Suzume` を追記してください。
+各種シンボリックリンク構成および `/src` 以外の各種コンテンツは [@tanban-org](https://github.com/tanban-org) およびその貢献者の手によるものです。
+本リポジトリを再利用する場合には、CC BY-SA 4.0 クレジット表記に `Tanban Foundation` を追記してください。
 
 # Distribution
 
 各シェープファイルを静的コンテンツとして配信するサービスを提供します。
-いずれもGETリクエストのみ受け入れる擬似的なAPIエンドポイントとして振る舞います。
+いずれもGETリクエストのみ受け入れる擬似的なRESTエンドポイントとして振る舞います。
 
-* [GitHub Pages](https://g1eng.github.io/geoshapes/)
+* [Tanban GeoShapes API](https://geoshapes.tanban.org/api/jp/)
+* [GitHub Pages](https://tanban-org.github.io/geoshapes-jp-static/)
 
 
 ## APIリソースについて
@@ -41,11 +44,14 @@
 | /version | APIバージョンを取得します | {"version": "0.1.1", "language":"ja"} |
 | /prefecture/list/name | 都道府県一覧を取得します | { "北海道": "01", ... } |
 | /prefecture/list/code | 都道府県一覧を取得します | { "01": "北海道", ... } |
-| /city/listAll | 市町村一覧を取得します | { "小樽市":"01101", ..., "八重山町":"47483" } |
-| /city/list/:pid | 都道府県内の市町村一覧を取得します | { "小樽市":"01101", ... } |
+| /city/list/name/all | 市町村一覧を取得します | { "小樽市":"01101", ..., "八重山町":"47483" } |
+| /city/list/name/:pid | 都道府県内の市町村一覧を取得します | { "小樽市":"01101", ... } |
+| /city/list/code/all | 市町村一覧を取得します | { "01101":"小樽市", ..., "47483":"八重山町" } |
+| /city/list/code/:pid | 都道府県内の市町村一覧を取得します | { "01101":"小樽市", ... } |
 | /city/info/:cid | 標準地域コードから市町村メタデータを取得します | {"prefName":"埼玉県","cityName":"川越市","cityCode":"11201","id":"gci:11201A1968"} |
-| /city/info/:p/:c | 市町村名から市町村メタデータを取得します | 14101 |
-| /city/info/:pid/:c | 市町村名から市町村メタデータを取得します | 14101 |
+| /city/info/:p/:c | 市町村名から市町村メタデータを取得します | {"prefName":"青森県","cityName":"弘前市","cityCode":"02202","id":"gci:02202A1968"} |
+| /city/info/:pid/:c | 市町村名から市町村メタデータを取得します | {"prefName":"青森県","cityName":"弘前市","cityCode":"02202","id":"gci:02202A1968"} |
+| /city/info/:pid/:cid | 市町村コードから市町村メタデータを取得します | {"prefName":"青森県","cityName":"弘前市","cityCode":"02202","id":"gci:02202A1968"} |
 | /:fmt/:cid | 市町村コードで境界データを取得します | (data body) |
 
 [凡例]
@@ -53,9 +59,9 @@
 | 名称 | 説明 | 値の例 |
 | --- | --- | --- |
 | :fmt | 境界データフォーマット | topojson |
-| :pid | 2桁の都道府県コード | 08 |
+| :pid | 都道府県コード | 3, 08, 31 |
 | :p | 都道府県名 | "宮崎県" |
-| :cid | 5桁表記の標準地域コード | 12204 |
+| :cid | 5桁表記の標準地域コード | 01105, 12204 |
 | :c | 市町村名 | "海老原市" |
 
 
