@@ -26,10 +26,20 @@
 
 # Distribution
 
-各シェープファイルを静的コンテンツとして配信するサービスを提供します。
+各シェープファイルを静的コンテンツとして配信するサービスを試験提供します。
 いずれもGETリクエストのみ受け入れる擬似的なRESTエンドポイントとして振る舞います。
 
+実験的サービスにつき、ベストエフォートかつ運営都合でのサービス停止などがある可能性にご留意ください。
+
 * [Tanban GeoShapes API](https://geoshapes.tanban.org/api/jp/)
+
+#### [Claims for users from countries which have GDPR or its compatible data protection law series]
+
+THIS IS A EXPERIMENTAL SERVICE ENDPOINT FOR COMMUNITIES OF PEOPLE IN JAPAN.
+DO NOT ACCESS THIS ENDPOINT FROM OUTSIDE JAPAN. (sorry, that's limited at now)
+
+YOU MUST DISCLAIM US (Conv4Japan Contributors) FROM ANY TYPE OF RISK, COST, DAMAGE, DUTY OR CHARGE WHICH IS PROBABLY ACCLAIMED BY YOU OR YOUR ORGANIZATION.
+
 
 ## APIリソースについて
 
