@@ -21,7 +21,7 @@
 なお、各コンテンツについては国土交通省の「[国土数値情報](http://nlftp.mlit.go.jp/ksj/)」をもとに作成されています。
 原データの利用規約については[こちら](http://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-N03.html)をご確認ください。
 
-各種シンボリックリンク構成および `/src` 以外の各種コンテンツは [Conv4Japan](@conv4ja)有志の手によるものです。
+各種シンボリックリンク構成および `/src` 以外の各種コンテンツは [Conv4Japan](https://github.com/conv4ja)有志の手によるものです。
 本リポジトリを再利用する場合には、CC BY-SA 4.0 クレジット表記に `Conv4Japan Contributors` を追記してください。
 
 # Distribution
