@@ -21,8 +21,8 @@
 なお、各コンテンツについては国土交通省の「[国土数値情報](http://nlftp.mlit.go.jp/ksj/)」をもとに作成されています。
 原データの利用規約については[こちら](http://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-N03.html)をご確認ください。
 
-各種シンボリックリンク構成および `/src` 以外の各種コンテンツは [@tanban-org](https://github.com/tanban-org) およびその貢献者の手によるものです。
-本リポジトリを再利用する場合には、CC BY-SA 4.0 クレジット表記に `Tanban Foundation` を追記してください。
+各種シンボリックリンク構成および `/src` 以外の各種コンテンツは [Conv4Japan](@conv4ja)有志の手によるものです。
+本リポジトリを再利用する場合には、CC BY-SA 4.0 クレジット表記に `Conv4Japan Contributors` を追記してください。
 
 # Distribution
 
@@ -30,8 +30,6 @@
 いずれもGETリクエストのみ受け入れる擬似的なRESTエンドポイントとして振る舞います。
 
 * [Tanban GeoShapes API](https://geoshapes.tanban.org/api/jp/)
-* [GitHub Pages](https://tanban-org.github.io/geoshapes-jp-static/)
-
 
 ## APIリソースについて
 
@@ -70,6 +68,6 @@
 行政区域データ・セットを提供いただきましたNII北本研究室に、感謝いたします。
 
 
-# 作業者
+# 作業者一覧
 
 Nomura Suzume <suzume315[at]g00.g1e.org>
