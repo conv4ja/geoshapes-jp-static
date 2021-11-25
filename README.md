@@ -44,7 +44,6 @@ YOU MUST DISCLAIM US (Conv4Japan Contributors) FROM ANY TYPE OF RISK, COST, DAMA
 ## APIリソースについて
 
 * すべてのリソースについて、GETリクエストのみ受け付けます。
-* github.ioではMIMEヘッダはサポートしません。リソースのMIMEタイプが正常に解釈されない場合があります。
 
 | リソース | 説明 | レスポンスの例 | 
 | --- | --- | --- |
