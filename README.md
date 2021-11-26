@@ -29,10 +29,11 @@
 各シェープファイルを静的コンテンツとして配信するサービスを試験提供します。
 いずれもGETリクエストのみ受け入れる擬似的なRESTエンドポイントとして振る舞います。
 
-実験的サービスにつき、ベストエフォートかつ運営都合でのサービス停止などがある可能性にご留意ください。
+実験的サービスにつき、ベストエフォートかつ運営都合でのサービス停止などがある可能性にご留意ください。サービス端でのCookieは発行せず、アクセスログは取得いたしません。CDNが設定するCookieのポリシについては、インフラ提供事業者のプライバシーポリシー参照ください。以下の試験的サービスでは[AWS](https://aws.amazon.com/jp/privacy/)および[さくらのクラウド](https://www.sakura.ad.jp/privacy/)を利用しています。
 **本サービスは現状有姿(AS-IS)のままで提供され、完全に無保証です**。利用者は自己の責任において本サービスを利用し、本サービスの利用に伴い生じた物理的、金銭的、その他あらゆる損害に対する責任から開発者(conv4japan contributors)を免責することに同意するものとします。
 
-* [Tanban GeoShapes API](https://geoshapes.tanban.org/api/jp/)
+* [Tanban Foundation GeoShapes API](https://geoshapes.tanban.org/api/jp/) (さくらのクラウド)
+* [AwShapes API](https://awshapes-jp.tanban.org/api/) (AWS)
 
 #### [Claims for users from countries which have GDPR or its compatible data protection law series]
 
@@ -72,6 +73,21 @@ YOU MUST DISCLAIM US (Conv4Japan Contributors) FROM ANY TYPE OF RISK, COST, DAMA
 | :cid | 5桁表記の標準地域コード | 01105, 12204 |
 | :c | 市町村名 | "海老原市" |
 
+## Dockerfile
+
+ローカルでリポジトリサービスを構築するためにDockerイメージを利用することができます。
+
+```
+docker build -t geoshapes .
+docker run -dt --rm -p 8080:80 geoshapes
+curl http://127.0.0.1:8080
+```
+
+または
+
+```
+docker run -dt --rm -p 8080:80 -v $(pwd)/src:/usr/local/apache2/htdocs httpd:alpine
+```
 
 # 謝辞
 
