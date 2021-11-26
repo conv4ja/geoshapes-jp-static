@@ -33,7 +33,7 @@
 **本サービスは現状有姿(AS-IS)のままで提供され、完全に無保証です**。利用者は自己の責任において本サービスを利用し、本サービスの利用に伴い生じた物理的、金銭的、その他あらゆる損害に対する責任から開発者(conv4japan contributors)を免責することに同意するものとします。
 
 * [Tanban Foundation GeoShapes API](https://geoshapes.tanban.org/api/jp/) (さくらのクラウド)
-* [AwShapes API](https://awshapes-jp.tanban.org/api/) (AWS)
+* [AwShapes API](https://awshapes-jp.tanban.org/api/) (AWS: will be published at 2021-11-26 21:00 JST)
 
 #### [Claims for users from countries which have GDPR or its compatible data protection law series]
 
