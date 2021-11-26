@@ -29,11 +29,15 @@
 各シェープファイルを静的コンテンツとして配信するサービスを試験提供します。
 いずれもGETリクエストのみ受け入れる擬似的なRESTエンドポイントとして振る舞います。
 
-実験的サービスにつき、ベストエフォートかつ運営都合でのサービス停止などがある可能性にご留意ください。サービス端でのCookieは発行せず、アクセスログは取得いたしません。CDNが設定するCookieのポリシについては、インフラ提供事業者のプライバシーポリシー参照ください。以下の試験的サービスでは[AWS](https://aws.amazon.com/jp/privacy/)および[さくらのクラウド](https://www.sakura.ad.jp/privacy/)を利用しています。
+実験的サービスにつき、ベストエフォートかつ運営都合でのサービス停止などがある可能性にご留意ください。サービス端でのCookieは発行せず、アクセスログは取得いたしません。CDNが設定するCookieのポリシについては、インフラ提供事業者のプライバシーポリシーを参照ください。以下の試験的サービスでは[AWS](https://aws.amazon.com/jp/privacy/)および[さくらのクラウド](https://www.sakura.ad.jp/privacy/)を利用しています。
 **本サービスは現状有姿(AS-IS)のままで提供され、完全に無保証です**。利用者は自己の責任において本サービスを利用し、本サービスの利用に伴い生じた物理的、金銭的、その他あらゆる損害に対する責任から開発者(conv4japan contributors)を免責することに同意するものとします。
 
-* [Tanban Foundation GeoShapes API](https://geoshapes.tanban.org/api/) (さくらのクラウド)
-* [AwShapes API](https://awshapes-jp.tanban.org/api/) (AWS: will be published at 2021-11-26 21:00 JST)
+| Name | Endpoint | Platform |
+| --- | --- | --- |
+| Tanban GeoShapes API | https://geoshapes.tanban.org/api/ | さくらのクラウド |
+| AwShapes API | https://awshapes.tanban.org/api/jp/| Amazon AWS |
+
+AwShapes will be published at 2021-11-26 21:00 JST
 
 #### [Claims for users from countries which have GDPR or its compatible data protection law series]
 
