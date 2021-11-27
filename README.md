@@ -37,13 +37,14 @@
 | Tanban GeoShapes API | https://geoshapes.tanban.org/api/ | さくらのクラウド |
 | AwShapes API | https://awshapes.tanban.org/api/jp/| Amazon AWS |
 
-AwShapes will be published at 2021-11-26 21:00 JST
+* さくらのクラウド(Geoshapes API)は、サービス仕様によりContent-Typeヘッダに対応していません。
+
 
 #### [Claims for users from countries which have GDPR or its compatible data protection law series]
 
 NEVER ACCESS THIS ENDPOINT FROM OUTSIDE JAPAN. (sorry, that's limited at now)
 
-YOU MUST DISCLAIM US (Conv4Japan Contributors) FROM ANY TYPE OF CHARGES OR DUTIES WHICH IS PROBABLY ACCLAIMED BY YOU, YOUR ORGANIZATION OR YOUR COUNTRY.
+YOU MUST DISCLAIM US (Conv4Japan Contributors) FROM ANY TYPE OF CHARGES OR DUTIES WHICH IS PROBABLY ACCLAIMED BY YOU, YOUR ORGANIZATION OR YOUR COUNTRY GOVERNMENT.
 
 
 ## APIリソースについて
@@ -78,7 +79,7 @@ YOU MUST DISCLAIM US (Conv4Japan Contributors) FROM ANY TYPE OF CHARGES OR DUTIE
 
 ## Dockerfile
 
-ローカルでリポジトリサービスを構築するためにDockerイメージを利用することができます。
+ローカルでリポジトリサービスを構築するためにDockerを利用することができます。
 
 ```
 docker build -t geoshapes .
