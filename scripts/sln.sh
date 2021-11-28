@@ -54,9 +54,9 @@ do
 			sln=src/$fmt/$pref_code/${city_name}
 			if [ -h $sln ]
 			then
-				ln -sv ${force:+-f} ../${basename} ${sln}
-			else
 				ln -sv ${force:+-f} ../${basename} ${sln}2
+			else
+				ln -sv ${force:+-f} ../${basename} ${sln}
 			fi
 			sln=src/$fmt/$pref_code/${city_fullname}
 			ln -sv ${force:+-f} ../${basename} ${sln} 2> /dev/null || :
