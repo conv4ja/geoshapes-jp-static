@@ -36,8 +36,14 @@ do
 		parseJSON $j | tr -d \\\n\\\  | tee $resource/$city_code > /dev/null
 		ln -sv ../$city_code $resource/$pref_code/$city_code
 		ln -sv ../$city_code $resource/$pref_name/$city_code
-		ln -sv ../$city_code $resource/$pref_code/$city_name
-		ln -sv ../$city_code $resource/$pref_name/$city_name
+		if [ -h "$resource/$pref_code/$city_name" ] 
+		then
+			ln -sv ../$city_code $resource/$pref_code/${city_name}2
+			ln -sv ../$city_code $resource/$pref_name/${city_name}2
+		else
+			ln -sv ../$city_code $resource/$pref_code/$city_name
+			ln -sv ../$city_code $resource/$pref_name/$city_name
+		fi
 		ln -sv $city_code $resource/$city_id
 	    } &
 	done

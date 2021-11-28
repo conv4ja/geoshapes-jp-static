@@ -52,8 +52,12 @@ do
 		ln -sv ${force:+-f} ../${basename} ${sln}
 		[ -n "$city_name" ] && {
 			sln=src/$fmt/$pref_code/${city_name}
-			ln -sv ${force:+-f} ../${basename} ${sln} \
-				|| ln -sv ${force:+-f} ../${basename} ${sln}2
+			if [ -h $sln ]
+			then
+				ln -sv ${force:+-f} ../${basename} ${sln}
+			else
+				ln -sv ${force:+-f} ../${basename} ${sln}2
+			fi
 			sln=src/$fmt/$pref_code/${city_fullname}
 			ln -sv ${force:+-f} ../${basename} ${sln} 2> /dev/null || :
 		}
