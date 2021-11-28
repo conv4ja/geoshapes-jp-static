@@ -39,9 +39,9 @@
 | /city/list/code/all | 市町村一覧を取得します | { "01101":"小樽市", ..., "47483":"八重山町" } |
 | /city/list/code/:pid | 都道府県内の市町村一覧を取得します | { "01101":"小樽市", ... } |
 | /city/info/:cid | 標準地域コードから市町村メタデータを取得します | {"prefName":"埼玉県","cityName":"川越市","cityCode":"11201","id":"gci:11201A1968"} |
-| /city/info/:p/:c | 市町村名から市町村メタデータを取得します | {"prefName":"青森県","cityName":"弘前市","cityCode":"02202","id":"gci:02202A1968"} |
-| /city/info/:pid/:c | 市町村名から市町村メタデータを取得します | {"prefName":"青森県","cityName":"弘前市","cityCode":"02202","id":"gci:02202A1968"} |
+| /city/info/:p/:c | 市町村名から市町村メタデータを取得します(experimental) | {"prefName":"青森県","cityName":"弘前市","cityCode":"02202","id":"gci:02202A1968"} |
 | /city/info/:pid/:cid | 市町村コードから市町村メタデータを取得します | {"prefName":"青森県","cityName":"弘前市","cityCode":"02202","id":"gci:02202A1968"} |
+| /city/info/:pid/:c | 市町村名から市町村メタデータを取得します(experimental) | {"prefName":"青森県","cityName":"弘前市","cityCode":"02202","id":"gci:02202A1968"} |
 | /:fmt/:cid | 市町村コードで境界データを取得します | (data body) |
 
 [凡例]
@@ -54,6 +54,7 @@
 | :cid | 5桁表記の標準地域コード | 01105, 12204 |
 | :c | 市町村名 | "海老原市" |
 
+* 市町村名をbasenameとするリソースは一部不具合が存在します。基本的には市町村コードを通じたリソースの取得を推奨いたします。 #1
 
 # Distribution
 
