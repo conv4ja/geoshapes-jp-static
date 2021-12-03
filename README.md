@@ -62,7 +62,7 @@
 いずれもGETリクエストのみ受け入れる擬似的なRESTエンドポイントとして振る舞います。
 
 実験的サービスにつき、ベストエフォートかつ運営都合でのサービス停止などがある可能性にご留意ください。サービス端でのCookieは発行せず、アクセスログは取得いたしません。CDNが設定するCookieのポリシについては、インフラ提供事業者のプライバシーポリシーを参照ください。以下の試験的サービスでは[AWS](https://aws.amazon.com/jp/privacy/)および[さくらのクラウド](https://www.sakura.ad.jp/privacy/)を利用しています。
-**本サービスは現状有姿(AS-IS)のままで提供され、完全に無保証です**。利用者は自己の責任において本サービスを利用し、本サービスの利用に伴い生じた物理的、金銭的、その他あらゆる損害に対する責任から開発者(conv4japan contributors)を免責することに同意するものとします。
+**本サービスは現状有姿(AS-IS)のままで提供され、完全に無保証です**。利用者は自己の責任において本サービスを利用し、本サービスの利用に伴い生じた物理的、金銭的、その他あらゆる損害に対する責任から開発者(conv4japan contributors)を免責することに同意するものとします。本サービスは日本国内の利用者を対象として提供されます。
 
 | Name | Endpoint | Platform |
 | --- | --- | --- |
@@ -70,13 +70,6 @@
 | AwShapes API | https://awshapes.tanban.org/api/jp/| Amazon AWS |
 
 * さくらのクラウド(Geoshapes API)は、サービス仕様により`Content-Type`ヘッダに対応していません。
-
-
-#### [Claims for users from countries which have GDPR or its compatible data protection law series]
-
-NEVER ACCESS THIS ENDPOINT FROM OUTSIDE JAPAN. (sorry, that's limited at now)
-
-YOU MUST DISCLAIM US (Conv4Japan Contributors) FROM ANY TYPE OF CHARGES OR DUTIES WHICH IS PROBABLY ACCLAIMED BY YOU, YOUR ORGANIZATION OR YOUR COUNTRY GOVERNMENT.
 
 
 ## Docker
