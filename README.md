@@ -10,19 +10,19 @@
 [ファイル配信サイト](#Distribution)では、各境界データを静的コンテンツとしてホストします。
 ファイル単位での取得をご希望の場合はこちらもご利用ください。
 
-なお、本リポジトリ `/src` 配下のgeojsonおよびtopojsonコンテンツは NII/CODH によりCC BY-SA 4.0 にて利用許諾されており、再利用の際は次のクレジット表記が必要となります。
+なお、本リポジトリ `/src` 配下のgeojsonおよびtopojsonコンテンツは NII/CODH によりCC BY 4.0 にて利用許諾されており、再利用の際は次のクレジット表記が必要となります。
 
-`『歴史的行政区域データセットβ版』（CODH作成）, CC BY-SA 4.0`
+`『歴史的行政区域データセットβ版』（CODH作成）, CC BY 4.0`
 
 もしくは
 
-` Asanobu KITAMOTO, ROIS-DS Center for Open Data in the Humanities, CC BY-SA 4.0 `
+` Asanobu KITAMOTO, ROIS-DS Center for Open Data in the Humanities, CC BY 4.0 `
 
 なお、各コンテンツについては国土交通省の「[国土数値情報](http://nlftp.mlit.go.jp/ksj/)」をもとに作成されています。
-原データの利用規約については[こちら](http://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-N03.html)をご確認ください。
+原データの利用規約(CC BY 4.0相当)については[こちら](http://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-N03.html)をご確認ください。
 
 各種シンボリックリンク構成および `/src` 以外の各種コンテンツは [Conv4Japan](https://github.com/conv4ja)有志の手によるものです。
-本リポジトリを再利用する場合には、CC BY-SA 4.0 クレジット表記に `Conv4Japan Contributors` を追記してください。
+本リポジトリを再利用する場合には、CC BY 4.0 クレジット表記に `Conv4Japan Contributors` を追記してください。
 
 ## APIリソースについて
 
