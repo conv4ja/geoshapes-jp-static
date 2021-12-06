@@ -1,6 +1,6 @@
 #!/bin/sh -ex
 # map.sh: map city name to city id
-# Lisence  CC BY-SA 4.0
+# License  CC BY-SA 4.0
 # Author   Suzume Nomura <suzume315[at]g00.g1e.org>
 
 case ${1:-nopbf} in

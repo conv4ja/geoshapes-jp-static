@@ -1,6 +1,6 @@
 #!/bin/sh -e
 # sln.sh: generate symbolic links for resources
-# Lisence  CC BY-SA 4.0
+# License  CC BY 4.0
 # Author   Suzume Nomura <suzume315[at]g00.g1e.org>
 
 

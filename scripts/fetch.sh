@@ -1,6 +1,6 @@
 #!/bin/sh -e
 # fetch.sh: fetch shape file from geoshape project official repository
-# Lisence  CC BY-SA 4.0
+# License  CC BY 4.0
 # Author   Suzume Nomura <suzume315[at]g00.g1e.org>
 
 echo fetching shape file from geoshape project...

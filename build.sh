@@ -12,6 +12,7 @@ sln.sh
 	generate_city_list.sh &
 	generate_city_info.sh &
 	versioning.sh &
+	licensing.sh &
 } 
 wait && echo repository is successfully built. \
 	|| { echo abort; exit 1; }

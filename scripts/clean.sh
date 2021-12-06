@@ -1,6 +1,6 @@
 #!/bin/sh -ex
 # clean.sh: clean all source files but shape files
-# Lisence  CC BY-SA 4.0
+# License  CC BY 4.0
 # Author   Suzume Nomura <suzume315[at]g00.g1e.org>
 
 for d in src/city src/prefecture src/pbf

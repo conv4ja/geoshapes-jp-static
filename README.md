@@ -32,6 +32,7 @@
 | --- | --- | --- |
 | /health | API稼働状況を取得します | status only |
 | /version | APIバージョンを取得します | {"version": "0.1.1", "language":"ja"} |
+| /license | ライセンス情報を取得します | {"license": "CC BY 4.0","url": "https://github.com/conv4ja/geoshapes-jp-static", ...} |
 | /prefecture/list/name | 都道府県一覧を取得します | { "北海道": "01", ... } |
 | /prefecture/list/code | 都道府県一覧を取得します | { "01": "北海道", ... } |
 | /city/list/name/all | 市町村一覧を取得します | { "小樽市":"01101", ..., "八重山町":"47483" } |

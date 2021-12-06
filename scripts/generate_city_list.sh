@@ -1,5 +1,7 @@
 #!/bin/sh -e
 # generate resources for /city/list/:prefCode and /city/listAll
+# License  CC BY 4.0
+# Author   Suzume Nomura <suzume315[at]g00.g1e.org>
 
 PATH=${0%/*}:$PATH
 #by default, topojson has several additional dataset of geometries. So use it.

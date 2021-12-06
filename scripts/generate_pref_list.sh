@@ -1,5 +1,7 @@
 #!/bin/sh -e
 # generate resources for /prefecture/list/{code,name}
+# License  CC BY 4.0
+# Author   Suzume Nomura <suzume315[at]g00.g1e.org>
 
 dir=src/prefecture/list;
 [ -d $dir ] && rm -rv $dir
