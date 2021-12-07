@@ -35,8 +35,5 @@ jobs:
         run: |
           NOW=$(date +%Y%m%d)
           aws --region="${{ secrets.AWS_REGION }}" \
-            s3 mkdir s3://"${{ secrets.AWS_BUCKET }}"/${NOW:?What date now?}/ \
-            > /dev/null 2> /dev/null
-          aws --region="${{ secrets.AWS_REGION }}" \
             s3 cp --recursive ./src s3://"${{ secrets.AWS_BUCKET }}"/${NOW:?What date now?}/api \
             > /dev/null 2> /dev/null
