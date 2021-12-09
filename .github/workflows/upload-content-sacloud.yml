@@ -23,8 +23,8 @@ jobs:
       - name: set access token
         run: |
           sed -i .aws/credentials -r \
-            -e s/AWS_ACCESS_TOKEN/"${{ secrets.SACLOUD_ACCESS_TOKEN }}"/g \
-            -e s/AWS_ACCESS_SECRET_TOKEN/"${{ secrets.SACLOUD_ACCESS_SECRET_TOKEN }}"/g 
+            -e s@AWS_ACCESS_TOKEN@"${{ secrets.SACLOUD_ACCESS_TOKEN }}"@g \
+            -e s@AWS_ACCESS_SECRET_TOKEN@"${{ secrets.SACLOUD_ACCESS_SECRET_TOKEN }}"@g 
           cp -r .aws ~/.aws
 
       - name: access check
@@ -34,6 +34,6 @@ jobs:
       - name: copy 
         run: |
           NOW=$(date +%Y%m%d)
-          aws --region="${{ secrets.SACLOUD_REGION }}" \
+          aws --endpoint="${{ secrets.SACLOUD_ENDPOINT }}" --region="${{ secrets.SACLOUD_REGION }}" \
             s3 cp --recursive ./src s3://"${{ secrets.SACLOUD_BUCKET }}"/${NOW:?What date now?}/api \
             > /dev/null 2> /dev/null
