@@ -3,7 +3,7 @@ name: upload contents
 on:
   push:
     branches:
-      - master
+      - deploy
       - github-action-dev
 
 jobs:
@@ -37,3 +37,6 @@ jobs:
           aws --region="${{ secrets.AWS_REGION }}" \
             s3 cp --recursive ./src s3://"${{ secrets.AWS_BUCKET }}"/${NOW:?What date now?}/api \
             > /dev/null 2> /dev/null
+          ln -sv ${NOW:?What date now?} latest
+          aws --endpoint="${{ secrets.SACLOUD_ENDPOINT }}" --region="${{ secrets.SACLOUD_REGION }}" \
+            s3 cp latest s3://"${{ secrets.SACLOUD_BUCKET }}"/latest \
