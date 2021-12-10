@@ -1,0 +1,42 @@
+name: upload contents
+
+on:
+  push:
+    branches:
+      - deploy
+      - github-action-dev
+
+jobs:
+
+  upload-testing:
+    runs-on: ubuntu-latest
+    if: github.event_name == 'push'
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: install awscli
+        run: |
+          sudo apt-get update -y
+          sudo apt-get install awscli
+
+      - name: set access token
+        run: |
+          sed -i .aws/credentials -r \
+            -e s@AWS_ACCESS_TOKEN@"${{ secrets.SACLOUD_ACCESS_TOKEN }}"@g \
+            -e s@AWS_ACCESS_SECRET_TOKEN@"${{ secrets.SACLOUD_ACCESS_SECRET_TOKEN }}"@g 
+          cp -r .aws ~/.aws
+
+      - name: access check
+        run: |
+          aws --endpoint="${{ secrets.SACLOUD_ENDPOINT }}" --region="${{ secrets.SACLOUD_REGION }}" s3 ls s3://"${{ secrets.SACLOUD_BUCKET }}"/ > /dev/null 2> /dev/null
+
+      - name: copy 
+        run: |
+          NOW=$(date +%Y%m%d)
+          aws --endpoint="${{ secrets.SACLOUD_ENDPOINT }}" --region="${{ secrets.SACLOUD_REGION }}" \
+            s3 cp --recursive ./src s3://"${{ secrets.SACLOUD_BUCKET }}"/${NOW:?What date now?}/api \
+            > /dev/null 2> /dev/null
+          ln -sv ${NOW:?What date now?} latest
+          aws --endpoint="${{ secrets.SACLOUD_ENDPOINT }}" --region="${{ secrets.SACLOUD_REGION }}" \
+            s3 cp latest s3://"${{ secrets.SACLOUD_BUCKET }}"/latest \
