@@ -1,3 +1,8 @@
+# END OF SERVICE 
+
+This repo and services related to the project is shut down.
+The upstream (NII) remains (ofcourse) alive, and the latest resouces will be hosted in another project.
+
 # ABOUT
 
 <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="クリエイティブ・コモンズ・ライセンス" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a><br />
@@ -56,22 +61,6 @@
 | :c | 市町村名 | "海老原市" |
 
 * 市町村名をbasenameとするリソースは[一部不具合](https://github.com/conv4ja/geoshapes-jp-static/issues/1)が存在します。基本的には市町村コードを通じたリソースの取得を推奨いたします。 
-
-# Distribution
-
-各シェープファイルを静的コンテンツとして配信するサービスを試験提供します。
-いずれもGETリクエストのみ受け入れる擬似的なRESTエンドポイントとして振る舞います。
-
-実験的サービスにつき、ベストエフォートかつ運営都合でのサービス停止などがある可能性にご留意ください。サービス端でのCookieは発行せず、アクセスログは取得いたしません。CDNが設定するCookieのポリシについては、インフラ提供事業者のプライバシーポリシーを参照ください。以下の試験的サービスでは[AWS](https://aws.amazon.com/jp/privacy/)および[さくらのクラウド](https://www.sakura.ad.jp/privacy/)を利用しています。
-**本サービスは現状有姿(AS-IS)のままで提供され、完全に無保証です**。利用者は自己の責任において本サービスを利用し、本サービスの利用に伴い生じた物理的、金銭的、その他あらゆる損害に対する責任から開発者(conv4japan contributors)を免責することに同意するものとします。本サービスは日本国内の利用者を対象として提供されます。
-
-| Name | Endpoint | Platform |
-| --- | --- | --- |
-| Tanban GeoShapes API | https://geoshapes.tanban.org/api/ | さくらのクラウド |
-| AwShapes API | https://awshapes.tanban.org/api/jp/| Amazon AWS |
-
-* さくらのクラウド(Geoshapes API)は、サービス仕様により`Content-Type`ヘッダに対応していません。
-
 
 ## Docker
 
